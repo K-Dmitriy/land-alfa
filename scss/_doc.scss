@@ -1,0 +1,134 @@
+.doc {
+    padding-top: 80px;
+
+    @media (max-width: 970px) {
+        padding-top: 60px;
+    }
+
+    @media (max-width: 685px) {
+        padding-top: 35px;
+    }
+
+    &__container {
+        display: flex;
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+        }
+    }
+
+    &__text {
+        max-width: 580px;
+
+        @media (max-width: 1200px) {
+            max-width: unset;
+        }
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 96px;
+        line-height: 1;
+
+        @media (max-width: 1200px) {
+            font-size: 72px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 64px;
+        }
+        
+        @media (max-width: 685px) {
+            font-size: 32px;
+        }
+    }
+
+    &__description {
+        margin-bottom: 95px;
+        font-weight: 300;
+        line-height: 2;
+
+        
+        @media (max-width: 685px) {
+            margin-bottom: 55px;
+            line-height: 1.5;
+        }
+
+        p {
+            margin-top: 45px;
+
+            @media (max-width: 970px) {
+                margin-top: 35px;
+            }
+            
+            @media (max-width: 685px) {
+                margin-top: 25px;
+            }
+        }
+    }
+    
+    &__name {
+        position: relative;
+        font-size: 24px;
+        line-height: 1;
+
+        &::before {
+            content: url('../img/doc-stamp.png');
+            position: absolute;
+            left: 145px;
+            top: 50%;
+            transform: translateY(-50%);
+            mix-blend-mode: multiply;
+            opacity: .5;
+        }
+
+        img {
+            margin-left: 35px;
+            vertical-align: text-bottom;
+        }
+    }
+
+    &__skill {
+        display: block;
+        margin: 70px 0 35px;
+        line-height: 2;
+
+        @media (max-width: 970px) {
+            margin: 55px 0 70px;
+
+            br {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 685px) {
+            margin: 55px 0 40px;
+        }
+    }
+    
+    &__image {
+        display: flex;
+        align-items: flex-end;
+        max-width: 705px;
+        margin-right: -45px;
+
+        @media (max-width: 1200px) {
+            max-width: unset;
+            margin-right: 0;
+        }
+    }
+
+    &__photo {
+        display: block;
+
+        @media (max-width: 1200px) {
+            max-width: 665px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 685px) {
+            max-width: 100%;
+            width: 345px;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+.why {
+    padding: 130px 0 120px;
+
+    @media (max-width: 768px) {
+        padding: 65px 0 55px;
+    }
+
+    @media (max-width: 685px) {
+        padding-top: 50px;
+        overflow-x: hidden;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__block_accent {
+        right: 50%;
+
+        @media (max-width: 1200px) {
+            right: unset;
+        }
+    }
+
+    &__title {
+        position: absolute;
+
+        @media (max-width: 1200px) {
+            position: relative;
+        }
+
+        &::before {
+            top: -80px;
+            left: -190px;
+            width: 715px;
+            height: 557px;
+
+            @media (max-width: 768px) {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 455px;
+                height: 335px;
+            }
+        }
+        
+        span {
+            padding: 85px;
+
+            @media (max-width: 768px) {
+                padding: 55px;
+            }
+        }
+    }
+
+    &__slider {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        @media (max-width: 1200px) {
+            margin-top: 130px;
+        }
+
+        @media (max-width: 768px) {
+            margin-top: 90px;
+        }
+
+        @media (max-width: 685px) {
+            margin-top: 60px;
+        }
+
+        &::before {
+            content: '';
+            width: 50%;
+        }
+    }
+
+    &__slide {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 395px;
+        min-height: 300px;
+        margin-top: 130px;
+        margin-right: 10%;
+
+        @media (max-width: 1200px) {
+            display: block;
+            max-width: unset;
+            min-height: unset;
+            margin: 0 16px;
+        }
+
+        @media (max-width: 685px) {
+            margin: 0;
+        }
+
+        &_name {
+            margin-bottom: 35px;
+            font-weight: 900;
+            font-size: 48px;
+            line-height: 1;
+
+            @media (max-width: 768px) {
+                margin-bottom: 30px;
+                font-size: 32px;
+            }
+
+            @media (max-width: 685px) {
+                margin-bottom: 10px;
+                font-size: 24px;
+            }
+        }
+        
+        &_description {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 2;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+        }
+    }
+}

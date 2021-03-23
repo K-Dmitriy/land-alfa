@@ -1,0 +1,254 @@
+*,
+*::before,
+*::after {
+	font-family: 'Roboto', sans-serif;
+}
+
+main,
+header {
+    &, *, *::after, *::before {
+        color: #fff;
+    }
+}
+
+span,
+option {
+	font: inherit;
+	color: inherit;
+}
+
+header,
+article,
+section {
+	background: linear-gradient(180deg, #32394A 0%, #151924 100%);
+}
+
+.container {
+	max-width: 1440px;
+	min-width: 320px;
+	margin: 0 auto;
+	padding: 0 96px;
+
+	@media (max-width: 1200px) {
+		padding: 0 32px;
+	}
+
+	@media (max-width: 685px) {
+		padding: 0 16px;
+	}
+}
+
+.accent {
+	font-size: 42px;
+	color: #778FF4;
+	text-shadow: 0 0 10px #000;
+
+	@media (max-width: 768px) {
+		font-size: 32px;
+	}
+
+	@media (max-width: 685px) {
+		font-size: 24px;
+	}
+
+	@media (max-width: 374px) {
+		font-size: 16px;
+	}
+}
+
+.block_accent {
+	position: relative;
+	top: 0;
+	max-width: 415px;
+	margin: 0 auto;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 1.5;
+
+	@media (max-width: 768px) {
+		max-width: 275px;
+		font-size: 32px;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		background: url('../img/block-accent.png') no-repeat;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		border: 4px solid #647AD8;
+		filter: blur(16px);
+		pointer-events: none;
+	}
+
+	& > span {
+		position: relative;
+		display: block;
+		border: 4px solid #647AD8;
+	}
+
+	strong {
+		font-weight: 900;
+		font-size: 72px;
+		line-height: 1;
+
+		@media (max-width: 768px) {
+			font-size: 48px;
+		}
+	}
+}
+
+.btn {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 320px;
+	padding: 16px 0;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	font-size: 32px;
+	font-style: italic;
+	line-height: 1;
+	text-transform: uppercase;
+	background: #778FF4;
+	box-shadow: 0px 4px 16px #647AD8;
+	border-radius: 4px;
+	border: none;
+	transition: box-shadow 300ms ease-in-out;
+
+	@media (max-width: 374px) {
+		width: 100%;
+	}
+
+	&::after {
+		content: '';
+		position: relative;
+		width: 40px;
+		height: 35px;
+		margin-left: 15px;
+		background: url('../img/btn-basket.svg') no-repeat;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:hover,
+	&:focus {
+		box-shadow: 0px 0px 0px #647AD8;
+	}
+
+	&:active {
+		box-shadow: 0px 4px 16px #647AD8;
+	}
+}
+
+//slider
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	margin-top: 35px;
+
+	@media (max-width: 685px) {
+		margin-top: 20px;
+	}
+
+	li {
+		width: 24px;
+		height: 24px;
+		padding: 0;
+		font-size: 0;
+
+		& + li {
+			margin-left: 15px;
+		}
+
+		button {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			background: #778FF4;
+			opacity: 0.5;
+			border: none;
+			border-radius: 50%;
+		}
+
+		&.slick-active button {
+			opacity: 1;
+		}
+	}
+}
+
+.slick-arrow {
+	z-index: 1;
+	position: absolute;
+	top: 25%;
+	width: 40px;
+	height: 70px;
+	font-size: 0;
+	background: url('../img/slider-arrow.svg') no-repeat;
+	background-size: contain;
+	border: none;
+	transform-origin: center center;
+
+	@media (max-width: 970px) {
+		top: 30%;
+	}
+}
+
+.slick-next {
+	right: 0;
+	transform: rotate(180deg);
+}
+
+// .readmore__btn {
+// 	color: #090c0b;
+// }
+
+form[action="/order/"]::after {
+	content: "*При заказе полного курса";
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 3px;
+}
+
+.rectangle {
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 965px;
+        height: 2000px;
+        background: #949BEF;
+        opacity: 0.2;
+		transform: rotate(-30deg);
+		pointer-events: none;
+    }
+}
+
+@import '_promo';
+@import '_form';
+@import '_why';
+@import '_remember';
+@import '_review';
+@import '_review-man';
+@import '_composition';
+@import '_test-results';
+@import '_doc';
+@import '_warranty';
+@import '_use';

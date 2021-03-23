@@ -1,0 +1,129 @@
+.form {
+    max-width: 385px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 16px;
+
+    @media (max-width: 1200px) {
+        max-width: unset;
+        border-radius: 0;
+
+        & > * {
+            max-width: 320px;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 45px;
+        padding-bottom: 35px;
+    }
+
+    @media (max-width: 685px) {
+        padding: 20px 16px;
+    }
+    
+    .product {
+        max-width: 250px;
+        margin:0 auto 30px;
+        text-align: center;
+    }
+
+    .timer {
+        margin-bottom: 10px;
+
+        * {
+            color: #000;
+        }
+
+        &-text {
+            margin-bottom: 10px;
+            text-align: center;
+            text-transform: uppercase;
+
+        }
+
+        &-box {
+            display: flex;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        &-colon {
+            margin: 0 10px;
+        }
+    }
+
+    .price {
+        margin-bottom: 20px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        text-align: center;
+        text-shadow: none;
+        font-size: 48px;
+
+        @media (max-width: 374px) {
+            font-size: 44px;
+        }
+    }
+
+    label {
+        position: relative;
+        display: block;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            background: no-repeat center center;
+            background-size: contain;
+        }
+
+        &.form__country::after {
+            background-image: url('../img/form-geo.svg');
+        }
+
+        &.form__name {
+            margin: 20px 0;
+
+            @media (max-width: 1200px) {
+                margin: 20px auto;
+            }
+
+            &::after {
+                background-image: url('../img/form-name.svg');
+            }
+        }
+
+        &.form__tel::after {
+            background-image: url('../img/form-tel.svg');
+        }
+    }
+
+    select,
+    input {
+        position: relative;
+        width: 100%;
+        padding: 10px 25px;
+        color: #000;
+        border: none;
+        border-radius: 0;
+        border-bottom: 2px solid #000;
+    }
+
+    .btn {
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .sale {
+        margin-bottom: 15px;
+        font-family: 'Lato', sans-serif;
+        color: #000;
+        text-align: center;
+    }
+}

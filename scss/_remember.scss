@@ -1,0 +1,217 @@
+.remember {
+    position: relative;
+    padding: 85px 0 100px;
+
+    @media (max-width: 970px) {
+        padding-bottom: 0;
+        overflow-x: hidden;
+    }
+
+    @media (max-width: 685px) {
+        padding-top: 35px;
+    }
+
+    &::before {
+        content: url('../img/remember-bg.jpg');
+        position: absolute;
+        bottom: -5px;
+        right: 0;
+        mix-blend-mode: screen;
+
+        @media (max-width: 970px) {
+            content: none;
+        }
+    }
+
+    &__container {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -105px;
+            width: 100%;
+            height: 100%;
+            background: url('../img/remember-boy-girl.png') no-repeat;
+            background-size: 53%;
+            background-position: right bottom;
+            pointer-events: none;
+
+            @media (max-width: 970px) {
+                content: none;
+            }
+        }
+
+        & > * {
+            max-width: 500px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-size: 72px;
+        line-height: 1;
+
+        @media (max-width: 685px) {
+            margin-bottom: 5px;
+            font-size: 32px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 60px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.3;
+
+        @media (max-width: 685px) {
+            margin-bottom: 45px;
+        }
+    }
+
+    &__list {
+        margin-bottom: 80px;
+
+        @media (max-width: 970px) {
+            max-width: unset;
+            margin-right: 210px;
+        }
+
+        @media (max-width: 685px) {
+            margin-right: 0;
+            margin-bottom: 60px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 85px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.3;
+
+        @media (max-width: 685px) {
+            padding-left: 55px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: url('../img/remember-icon.svg') no-repeat;
+            background-size: contain;
+
+            @media (max-width: 685px) {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        &::before {
+            filter: blur(16px);
+        }
+
+        & + & {
+            margin-top: 40px;
+
+            @media (max-width: 685px) {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    &__block_accent {
+        margin: 0;
+
+        @media (max-width: 970px) {
+            margin: 0 auto;
+            margin-bottom: 75px;
+        }
+
+        @media (max-width: 768px) {
+            margin-left: 0;
+        }
+
+        @media (max-width: 685px) {
+            margin-bottom: 40px;
+        }
+
+        &::before {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 845px;
+            height: 600px;
+
+            @media (max-width: 970px) {
+                top: 60%;
+            }
+
+            @media (max-width: 685px) {
+                left: 45%;
+                width: 560px;
+                height: 435px;
+            }
+        }
+
+        & > span {
+            padding: 65px 35px;
+
+            @media (max-width: 685px) {
+                padding: 30px 25px;
+            }
+        }
+
+        strong {
+            font-size: 64px;
+
+            @media (max-width: 685px) {
+                font-size: 40px;
+            }
+        }
+    }
+
+    &__subtitle {
+        display: block;
+        margin-bottom: 30px;
+
+        @media (max-width: 685px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__subline {
+        display: block;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+
+        b {
+            color: #00B2FF;
+        }
+    }
+
+    &__image {
+        position: relative;
+        display: none;
+        max-width: unset;
+
+        @media (max-width: 970px) {
+            display: block;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
